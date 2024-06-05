@@ -1,5 +1,3 @@
-import Menu from "./Menu"
-
 interface TituloProps {
     titulo: string
     subtitulo: string

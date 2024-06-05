@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
 
-
 export default function Home() {
   return (
       <Layout titulo="Página Incial" subtitulo="Estamos Preparando uma Página Login">

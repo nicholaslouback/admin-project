@@ -1,13 +1,13 @@
 import MenuElement from "./MenuElement";
-import { IconAdjust, IconDo, IconHome } from "./icons";
+import { IconHome, IconAdjust, IconDo } from "./icons";
 
 export default function Menu() {
     return (
         <aside>
             <ul>
-                <MenuElement url="/" texto="Início" icone={IconHome} />
-                <MenuElement url="/" texto="Ajustes" icone={IconAdjust} />
-                <MenuElement url="/" texto="Tarefas" icone={IconDo} />
+                <MenuElement url="/index" texto="Início" icone={IconHome} />
+                <MenuElement url="/ajustes" texto="Ajustes" icone={IconAdjust} />
+                <MenuElement url="/tarefas" texto="Tarefas" icone={IconDo} />
             </ul>
         </aside>
     )

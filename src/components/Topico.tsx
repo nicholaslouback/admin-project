@@ -4,12 +4,10 @@ interface TopicoProps {
 
 export default function Topico(props: TopicoProps) {
     return (
-        <div>
-            <div className={`
-                flex flex-col mt-7
-            `}>
-                {props.children}
-            </div>
+        <div className={`
+            flex flex-col mt-7
+        `}>
+            {props.children}
         </div>
     )
 }
