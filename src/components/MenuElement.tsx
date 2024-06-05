@@ -11,10 +11,13 @@ export default function MenuElement(props: MenuElementProps) {
         <li className={`hover:bg-gray-100`}>
             <Link href={props.url} passHref>
                 <div className={
-                    `flex flex-col justify-center items-center h-20 w-full
+                    `flex flex-col justify-center items-center 
+                     h-20 w-20
                 `}>
                         {props.icone}
-                    <span>
+                    <span className={`
+                        text-xs font-light
+                    `}> 
                         {props.texto}
                     </span>
                 </div>
