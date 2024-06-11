@@ -4,7 +4,7 @@ import { IconHome, IconAdjust, IconDo } from "./icons";
 
 export default function Menu() {
     return (
-        <aside>
+        <aside  className="flex flex-col">
             <div className={`
                 flex flex-col items-center justify-center
                 bg-gradient-to-r from-pink-500 to-purple-800
@@ -12,10 +12,13 @@ export default function Menu() {
             `}>
             <Logo />
             </div>
-            <ul>
+            <ul className="flex-grow">
                 <MenuElement url="/inicio" texto="Início" icone={IconHome} />
                 <MenuElement url="/ajustes" texto="Ajustes" icone={IconAdjust} />
                 <MenuElement url="/tarefas" texto="Tarefas" icone={IconDo} />
+            </ul>
+            <ul>
+                <MenuElement url="/tarefas" texto="Exit" icone={IconDo} />
             </ul>
         </aside>
     )
