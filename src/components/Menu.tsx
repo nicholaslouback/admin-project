@@ -14,11 +14,12 @@ export default function Menu() {
             </div>
             <ul className="flex-grow">
                 <MenuElement url="/inicio" texto="Início" icone={IconHome} />
-                <MenuElement url="/ajustes" texto="Ajustes" icone={IconAdjust} />
+                <MenuElement url="/ajustes" texto="Ajustes" icone={IconAdjust}/>
                 <MenuElement url="/tarefas" texto="Tarefas" icone={IconDo} />
             </ul>
             <ul>
-                <MenuElement url="/sair" texto="Sair" icone={IconExit} />
+                <MenuElement texto="Sair" icone={IconExit}
+                onClick={() => console.log('logout')} />
             </ul>
         </aside>
     )
