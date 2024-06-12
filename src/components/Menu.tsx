@@ -1,6 +1,6 @@
 import MenuElement from "./MenuElement";
 import Logo from "./Logo"
-import { IconHome, IconAdjust, IconDo } from "./icons";
+import { IconHome, IconAdjust, IconDo, IconExit } from "./icons";
 
 export default function Menu() {
     return (
@@ -18,7 +18,7 @@ export default function Menu() {
                 <MenuElement url="/tarefas" texto="Tarefas" icone={IconDo} />
             </ul>
             <ul>
-                <MenuElement url="/tarefas" texto="Exit" icone={IconDo} />
+                <MenuElement url="/sair" texto="Sair" icone={IconExit} />
             </ul>
         </aside>
     )
