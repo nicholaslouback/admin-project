@@ -4,7 +4,11 @@ import { IconHome, IconAdjust, IconDo, IconExit } from "./icons";
 
 export default function Menu() {
     return (
-        <aside  className="flex flex-col">
+        <aside  className={`
+            flex flex-col
+            bg-gray-200 text-gray-700
+            dark:bg-gray-900 
+        `}>
             <div className={`
                 flex flex-col items-center justify-center
                 bg-gradient-to-r from-pink-500 to-purple-800

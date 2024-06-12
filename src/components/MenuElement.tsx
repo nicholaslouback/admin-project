@@ -13,7 +13,9 @@ export default function MenuElement(props: MenuElementProps) {
         return (
             <div className={`
                 flex flex-col justify-center items-center
-                 h-20 w-20 ${props.className}
+                 h-20 w-20 
+                 dark:text-gray-200
+                 ${props.className}
             `}>
                     {props.icone}
                 <span className={`
@@ -25,7 +27,7 @@ export default function MenuElement(props: MenuElementProps) {
         )
     }
     return (
-        <li className={`hover:bg-gray-100 cursor-pointer`}>
+        <li className={`hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer`}>
             {props.url ? (
             <Link href={props.url} passHref>
                     {renderizarLink()}
