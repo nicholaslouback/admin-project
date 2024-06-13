@@ -1,11 +1,25 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
-const AppContext = createContext({})
+type Tema = 'dark' | ''
+
+interface AppContextProps {
+    tema: string
+    alternarTema: () => void
+}
+
+const AppContext = createContext<AppContextProps>({})
 
 export function AppProvider(props) {
+    const [tema, setTema] = useState<Tema>('')
+
+    function alternarTema() {
+        setTema(tema === '' ? 'dark' : '')
+    }
+
     return (
         <AppContext.Provider value={{
-            nome: 'Teste'
+            tema,
+            alternarTema
         }}>
             {props.children}
         </AppContext.Provider>
@@ -13,3 +27,4 @@ export function AppProvider(props) {
 }
 
 export default AppContext
+export const AppConsumer = AppContext.Consumer
