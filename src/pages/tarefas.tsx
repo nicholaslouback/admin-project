@@ -8,7 +8,6 @@ export default function Tarefas() {
   return (
       <Layout titulo="Tarefas" 
         subtitulo="Nesta aba você poderá acompanhar suas tarefas!">
-        <button onClick={ctx.alternarTema}>Vem que vem</button>
       </Layout>
   )
 }

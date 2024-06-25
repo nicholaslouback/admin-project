@@ -14,7 +14,7 @@ export default function Cabecalho(props: CabecalhoProps) {
         <div className={`flex`}>
             <Titulo titulo={props.titulo} subtitulo={props.subtitulo } />
             <div className={`flex flex-grow justify-end`}>
-                    <AlternarTema tema='dark' alternarTema={alternarTema}/>
+                    <AlternarTema tema={tema} alternarTema={alternarTema}/>
             </div>
         </div>
     )
