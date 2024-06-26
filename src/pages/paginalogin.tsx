@@ -17,10 +17,12 @@ export default function PaginaLogin() {
     return (
         <div>
             <h1 className={`
-                        text-xl font-bold mb-3
+                  text-xl font-bold 
                 `}>
-                {modo === 'login' ? 'Insira a Sua Conta Cadastrada' : 'Faça o Cadastro na Plataforma'}
+                {modo === 'login' ? 'Insira a Sua Conta' : 'Faça o Cadastro na Plataforma'}
             </h1>
+            <h2 className={`mb-3`}>Continuar para Plataforma</h2>
+
             <LoginInput 
                 label={"Email"} 
                 tipo="email" 
@@ -42,6 +44,7 @@ export default function PaginaLogin() {
                 {modo === 'login' ? 'Entrar' : 'Cadastrar'}
             </button>
 
+            
         </div>
     )
 }

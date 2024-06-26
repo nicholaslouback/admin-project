@@ -9,11 +9,15 @@ interface LoginInputProps {
 
 export default function LoginInput(props: LoginInputProps) {
     return (
-        <div>
+        <div className={`
+                flex flex-col
+            `}>
             <label>{props.label}</label>
-            <input type={props.tipo ?? 'textnpm run dev'} value={props.valor} 
-            onChange={e => props.valorMudou?.(e.target.value)}
-            required={props.obrigatorio}
+            <input className={`bg-blue-200`} 
+                type={props.tipo ?? 'text'} 
+                value={props.valor} 
+                onChange={e => props.valorMudou?.(e.target.value)}
+                required={props.obrigatorio}
             />
         </div>
     )
