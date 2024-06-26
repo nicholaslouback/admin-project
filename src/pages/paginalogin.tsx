@@ -6,11 +6,42 @@ export default function PaginaLogin() {
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
     
+    function submeter() {
+        if (modo === 'login') {
+            console.log('login')
+        } else {
+            console.log('cadastrar')
+        }
+    }
+
     return (
         <div>
-            <LoginInput label={"Email"} tipo="email" valor={email} valorMudou={setEmail} obrigatorio />
+            <h1 className={`
+                        text-xl font-bold mb-3
+                `}>
+                {modo === 'login' ? 'Insira a Sua Conta Cadastrada' : 'Faça o Cadastro na Plataforma'}
+            </h1>
+            <LoginInput 
+                label={"Email"} 
+                tipo="email" 
+                valor={email} 
+                valorMudou={setEmail} 
+                obrigatorio />
         
-            <LoginInput label={"Senha"} tipo="password" valor={senha} valorMudou={setSenha} obrigatorio />
+            <LoginInput 
+                label={"Senha"} 
+                tipo="password" 
+                valor={senha} 
+                valorMudou={setSenha} 
+                obrigatorio />
+            
+            <button onClick={submeter} className={
+                `w-full bg-blue-600 hover:bg-blue-500 
+                text-white rounded-lg px-4 py-3 mt-6 
+                 `}>
+                {modo === 'login' ? 'Entrar' : 'Cadastrar'}
+            </button>
+
         </div>
     )
 }

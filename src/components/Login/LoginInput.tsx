@@ -11,7 +11,7 @@ export default function LoginInput(props: LoginInputProps) {
     return (
         <div>
             <label>{props.label}</label>
-            <input type={props.tipo ?? 'text'} value={props.valor} 
+            <input type={props.tipo ?? 'textnpm run dev'} value={props.valor} 
             onChange={e => props.valorMudou?.(e.target.value)}
             required={props.obrigatorio}
             />
