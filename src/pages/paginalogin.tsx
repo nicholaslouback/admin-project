@@ -15,7 +15,7 @@ export default function PaginaLogin() {
     }
 
     return (
-        <div>
+        <div className="w-1/2">
             <h1 className={`
                   text-xl font-bold 
                 `}>
@@ -42,6 +42,13 @@ export default function PaginaLogin() {
                 text-white rounded-lg px-4 py-3 mt-6 
                  `}>
                 {modo === 'login' ? 'Entrar' : 'Cadastrar'}
+            </button>
+
+            <button onClick={submeter} className={
+                `w-full bg-red-600 hover:bg-red-400 
+                text-white rounded-lg px-4 py-3 mt-2 
+                 `}>
+                Entrar com Google
             </button>
 
             
