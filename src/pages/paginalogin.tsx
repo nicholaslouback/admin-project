@@ -15,8 +15,8 @@ export default function PaginaLogin() {
     }
 
     return (
-        <div className="flex flex-col h-screen items-center justify-center">
-            <div className="w-1/2">
+        <div className="flex h-screen items-center justify-center">
+            <div className="m-10 w-full mb:w-1/2">
                 <h1 className={`
                       text-xl font-bold
                     `}>
@@ -43,6 +43,10 @@ export default function PaginaLogin() {
                      `}>
                     {modo === 'login' ? 'Entrar' : 'Cadastrar'}
                 </button>
+            </div>
+            <div className="hidden md:block w-1/2">
+                <img src="https://source.unsplash.com/random" alt="Imagem Tela de Login" 
+                className="w-full h-screen object-cover"/>
             </div>
         </div>
     )
