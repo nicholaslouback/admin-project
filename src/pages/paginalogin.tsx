@@ -15,43 +15,35 @@ export default function PaginaLogin() {
     }
 
     return (
-        <div className="w-1/2">
-            <h1 className={`
-                  text-xl font-bold 
-                `}>
-                {modo === 'login' ? 'Insira a Sua Conta' : 'Faça o Cadastro na Plataforma'}
-            </h1>
-            <h2 className={`mb-3`}>Continuar para Plataforma</h2>
-
-            <LoginInput 
-                label={"Email"} 
-                tipo="email" 
-                valor={email} 
-                valorMudou={setEmail} 
-                obrigatorio />
-        
-            <LoginInput 
-                label={"Senha"} 
-                tipo="password" 
-                valor={senha} 
-                valorMudou={setSenha} 
-                obrigatorio />
+        <div className="flex flex-col h-screen items-center justify-center">
+            <div className="w-1/2">
+                <h1 className={`
+                      text-xl font-bold
+                    `}>
+                    {modo === 'login' ? 'Insira a Sua Conta' : 'Faça o Cadastro na Plataforma'}
+                </h1>
+                <h2 className={`mb-3`}>Continuar para Plataforma</h2>
+                <LoginInput
+                    label={"Email"}
+                    tipo="email"
+                    valor={email}
+                    valorMudou={setEmail}
+                    obrigatorio />
             
-            <button onClick={submeter} className={
-                `w-full bg-blue-600 hover:bg-blue-500 
-                text-white rounded-lg px-4 py-3 mt-6 
-                 `}>
-                {modo === 'login' ? 'Entrar' : 'Cadastrar'}
-            </button>
-
-            <button onClick={submeter} className={
-                `w-full bg-red-600 hover:bg-red-400 
-                text-white rounded-lg px-4 py-3 mt-2 
-                 `}>
-                Entrar com Google
-            </button>
-
+                <LoginInput
+                    label={"Senha"}
+                    tipo="password"
+                    valor={senha}
+                    valorMudou={setSenha}
+                    obrigatorio />
             
+                <button onClick={submeter} className={
+                    `w-full bg-blue-600 hover:bg-blue-500
+                    text-white rounded-lg px-4 py-3 mt-6
+                     `}>
+                    {modo === 'login' ? 'Entrar' : 'Cadastrar'}
+                </button>
+            </div>
         </div>
     )
 }
