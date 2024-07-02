@@ -23,6 +23,7 @@ export default function LoginInput(props: LoginInputProps) {
                     focus:outline-none
                 `}
             />
+            
         </div>
     )
 }

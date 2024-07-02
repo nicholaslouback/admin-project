@@ -45,8 +45,8 @@ export default function PaginaLogin() {
                 </button>
             </div>
             <div className="hidden md:block w-1/2">
-                <img src="https://source.unsplash.com/random" alt="Imagem Tela de Login" 
-                className="w-full h-screen object-cover"/>
+                <img src="https://picsum.photos/200/300" alt="Imagem Tela de Login" 
+                className=""/>
             </div>
         </div>
     )
